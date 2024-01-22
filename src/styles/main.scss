@@ -1,0 +1,139 @@
+@import "./variables.scss";
+
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+
+@import "../../node_modules/bootstrap/scss/variables";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h3 {
+  text-align: center;
+  margin: 2rem;
+  font-size: 2rem;
+  color: $primary;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  height: 50px;
+  // position: fixed;
+
+  .logo {
+    padding-left: 1rem;
+  }
+
+  p {
+    width: 100%;
+    padding-top: 1rem;
+    padding-left: 1rem;
+  }
+}
+
+// nav bar styling
+nav {
+  width: 100vw;
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 2rem;
+}
+
+nav a {
+  color: $tertiary;
+  font-weight: 400;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+nav a:hover {
+  background-color: #dddddd28;
+  color: black;
+}
+
+// banner styling
+
+main .banner_img {
+  width: 100vw;
+  height: 400px;
+
+  background-image: url(../images/icons8-team-y2T5hT7pWx4-unsplash.jpg);
+  background-size: contain;
+  background-position: left;
+  background-repeat: no-repeat;
+  opacity: 85%;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  .banner_text {
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+    font-size: 1.5rem;
+    font-weight: 300;
+
+    text-align: right;
+    width: 500px;
+    padding: 2rem;
+
+    h1 {
+      font-size: 5rem;
+    }
+
+    a {
+      text-shadow: none;
+    }
+  }
+}
+
+// info section
+
+.info_section {
+  margin: 2rem 6rem;
+
+  li {
+    list-style: none;
+    line-height: 2.5rem;
+  }
+}
+
+details {
+  border-bottom: black 1px solid;
+  font-size: 1.2rem;
+}
+
+summary {
+  padding: 0.5em 1.3rem;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  transition: height 500ms ease;
+}
+
+summary:after {
+  content: "\002B";
+}
+
+details[open] summary {
+  border-bottom: 1px solid #aaa;
+  margin-bottom: 0.5em;
+}
+
+details[open] summary:after {
+  content: "\00D7";
+}
+
+details[open] div {
+  padding: 0.5em 1em;
+}
+
+// saunas section
+.saunas {
+  margin: 2rem 6rem;
+}
