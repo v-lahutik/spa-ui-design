@@ -11989,11 +11989,18 @@ h3, .h3 {
   color: #d2b07d;
 }
 
+h5, .h5 {
+  color: #d2b07d;
+  font-style: italic;
+}
+
 header {
   display: flex;
   align-items: center;
   width: 100vw;
   height: 50px;
+  position: fixed;
+  z-index: 100;
 }
 header .logo {
   padding-left: 1rem;
@@ -12052,10 +12059,11 @@ main .banner_img .banner_text a {
   text-shadow: none;
 }
 
-.info_section {
-  margin: 2rem 6rem;
+.info_section, .massage_section {
+  width: 60vw;
+  margin: auto;
 }
-.info_section li {
+.info_section li, .massage_section li {
   list-style: none;
   line-height: 2.5rem;
 }
@@ -12090,6 +12098,83 @@ details[open] div {
   padding: 0.5em 1em;
 }
 
-.saunas {
+.saunas_section {
   margin: 2rem 6rem;
+}
+
+section p {
+  width: 80%;
+  text-align: center;
+  padding-bottom: 1rem;
+  margin: auto;
+}
+
+.facials_section {
+  margin: 2rem 2rem;
+}
+
+.facial_options {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.facial_options p:first-child {
+  padding: 1rem;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+  margin: 1.5rem;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 1500ms ease-in-out;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #d2b07d;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.restaurant_section {
+  margin: 2rem 2rem;
+}
+.restaurant_section .menu {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+.restaurant_section img {
+  width: 100%;
+  height: 90%;
+}
+.restaurant_section h5, .restaurant_section .h5 {
+  text-align: center;
+  font-style: normal;
 }/*# sourceMappingURL=main.css.map */
