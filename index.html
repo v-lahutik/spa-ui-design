@@ -62,8 +62,8 @@
             or with the family.
           </p>
 
-          <a class="btn btn-primary btn-lg" href="#" role="button">Book now</a>
-          <a class="btn btn-primary btn-lg" href="#" role="button"
+          <a class="btn btn-primary btn-lg" href="#book" role="button">Book now</a>
+          <a class="btn btn-primary btn-lg" href="#book" role="button"
             >Buy a gift card</a
           >
         </div>
@@ -364,15 +364,15 @@
             <img class="card-img-top" src="./src/images/breakfast.jpg" alt="Card image cap">
             <div class="card-body">
               <h5 class="card-title">Breakfast</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <p class="card-text">Serving traditional breakfast favorites like Waffles, Pancakes, Biscuits & Sausage Gravy, Omelet and more!</p>
               <a href="#" class="btn btn-primary">Breakfast Menu</a>
             </div>
           </div>
           <div class="card" style="width: 18rem;">
             <img class="card-img-top" src="./src/images/main_course.jpg" alt="Card image cap">
-            <div class="card-body">
+            <div class="card-body ">
               <h5 class="card-title">Main courses</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <p class="card-text">The cousine of Lotus Spa is characterized by plenty of fresh vegetables, fish and tender meats as well as a varied seasonal menu.</p>
               <a href="#" class="btn btn-primary">Main Course Menu</a>
             </div>
           </div>
@@ -380,17 +380,72 @@
             <img class="card-img-top" src="./src/images/dessert.jpg" alt="Card image cap">
             <div class="card-body">
               <h5 class="card-title">Dessert</h5>
-              <p class="card-text ">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <p class="card-text "> All of our desserts are made in-house in order to bring you fresh and tasty sweets to accompany your meal.</p>
               <a href="#" class="btn btn-primary ">Dessert Menu</a>
             </div>
           </div>
-
-
         </div>
+    </section>
 
+    <section class="booking">
+      <h3 id="book">Booking & Shop</h3>
 
+      <div class="form_container">
+        <h2>Booking Form</h2>
+        <form>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+    
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+    
+          <label for="phone">Phone Number:</label>
+          <input type="tel" id="phone" name="phone" required>
+    
+          <label for="date">Date:</label>
+          <input type="date" id="date" name="date" required>
+
+          <label for="time">Time:</label>
+          <input type="time" id="time" name="time" required>
+
+          
+          <label for="comments">Comments:</label>
+          <textarea id="comments" name="comments" rows="4" placeholder=""></textarea>
+    
+          <input type="submit" value="Submit">
+        </form>
+      </div>
+      <div class="gift_container">
+        <h2>Gift Card Purchase Form</h2>
+        <form>
+          <label for="name">Your Name:</label>
+          <input type="text" id="name" name="name" required>
+    
+          <label for="email">Your Email:</label>
+          <input type="email" id="email" name="email" required>
+    
+          <label for="amount">Gift Card Amount:</label>
+          <select id="amount" name="amount" required>
+            <option value="25">€25</option>
+            <option value="50">€50</option>
+            <option value="100">€100</option>
+            <option value="custom">Custom Amount</option>
+          </select>
+    
+          <label for="custom_amount">Custom Amount:</label>
+          <input type="number" id="custom_amount" name="custom_amount" min="25" max="1000" placeholder="€">
+    
+          <label for="comments">Additional Comments:</label>
+          <textarea id="comments" name="comments" rows="4"></textarea>
+    
+          <input type="submit" value="Purchase Gift Card">
+        </form>
+      </div>
     </section>
     </main>
+    <footer>
+      <p>&copy; 2024 Lotus Spa. All rights reserved.</p>
+      
   </body>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </html>
