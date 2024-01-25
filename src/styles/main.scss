@@ -4,17 +4,18 @@
 
 @import "../../node_modules/bootstrap/scss/variables";
 
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Text&family=Lato&family=Playfair+Display:wght@400;500&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Playfair Display", serif;
 }
 
 // general styling
 
 h5 {
   color: $primary;
-  
 }
 
 // header styling
@@ -35,7 +36,6 @@ header {
     padding-top: 1rem;
     padding-left: 1rem;
     visibility: hidden;
-    
   }
 }
 
@@ -45,7 +45,6 @@ nav {
   display: flex;
   justify-content: flex-end;
   padding: 0 2rem;
-  
 }
 
 nav a {
@@ -80,7 +79,7 @@ main .banner_img {
   .banner_text {
     text-align: right;
     width: 400px;
-  
+
     padding: 2rem;
     margin-top: 1rem;
 
@@ -89,10 +88,10 @@ main .banner_img {
       color: white;
       text-shadow: 2px 2px 4px #000000;
     }
-    
-    p{
+
+    p {
       font-size: 1rem;
-      color: $text-color; 
+      color: $text-color;
 
       text-align: right;
       width: 250px;
@@ -176,18 +175,16 @@ details[open] div {
 // saunas section
 .saunas_section {
   margin: 2rem 2rem;
-  p{
+  p {
     text-align: center;
   }
 
   section p {
-  width: 90%;
-  text-align: center;
-  padding-bottom: 1rem;
-  
+    width: 90%;
+    text-align: center;
+    padding-bottom: 1rem;
+  }
 }
-}
-
 
 //  facials section
 
@@ -196,18 +193,16 @@ details[open] div {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-    h5{
-      text-align: center;
-    }
+  h5 {
+    text-align: center;
+  }
 }
-.facials_section{
-p{
+.facials_section {
+  p {
     text-align: center;
     padding-bottom: 1rem;
   }
-}  
-   
-   
+}
 
 // facial flip cards
 
@@ -250,33 +245,32 @@ p{
   background-color: $primary;
   color: white;
   transform: rotateY(180deg);
+  padding: 0.5rem;
 }
 
 // restaurant section
 
 .restaurant_section {
-  
   .menu {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 1rem;
-    
+
     .card-text {
       margin: 0;
-      
     }
   }
-  img{
+  img {
     width: 100%;
     height: 90%;
   }
-  h5{
+  h5 {
     text-align: center;
     font-style: normal;
     padding: 0.3rem;
   }
-  p{
+  p {
     text-align: center;
     padding: 1rem 0;
   }
@@ -284,9 +278,7 @@ p{
   a {
     width: 100%;
     margin-left: auto;
-    
   }
-  
 }
 
 // booking & shop section
@@ -294,7 +286,6 @@ p{
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  
 }
 
 .form_container,
@@ -351,83 +342,109 @@ input[type="submit"] {
 input[type="submit"]:hover {
   background-color: $tertiary;
 }
+
+// go up 
+
+.go_up{
+  display: flex;
+  justify-content: center;
+  margin: 1rem;
+  padding-top: 1rem;
+}
 // footer styling
 footer {
   width: 100%;
-  height: 50px;
+  height: auto;
   overflow: hidden;
-  
+
   background-color: $secondary;
   text-align: center;
   padding-top: 1rem;
-  
-}
 
-// media queries
-
-
-@media only screen and (min-width: 768px){
-  header{
-
-  .web_name{
-    visibility: visible;
-   
-  }
-}
-  .facials_section {
-  margin: 0rem 2rem;
-
-  p{
-    margin: 0 10%;
-  }
-}
-.restaurant_section {
-  margin: 0 2rem 2rem;
-  
-  p{
-    margin: 0 10%;
-  }
-}
-.info_section, .massage_section{
-  width: 60vw;
-  margin: auto;
-}
-
-main .banner_img{
-
-.banner_text {
-  text-align: right;
-  width: 500px;
-  padding: 3rem;
-
-  h1 {
-    font-size: 5rem;
-  }
-  p{
-    width: 100%;
-    font-size: 1.5rem;
-  }
-
-}
-}
-@media only screen and (min-width: 992px)  {
-
-  .restaurant_section {
-    p{
-      margin: 0 15%;
+  .social_media {
+    padding: 1rem 0;
+    a {
+      font-size: 1.5rem;
+      margin: 1rem;
     }
   }
-  
+}
+// media queries
+
+@media only screen and (max-width: 520px) {
+  .banner_img {
+    position: relative;
+    top: 50px;
+    .banner_text h1,
+    a {
+      position: relative;
+      top: 80px;
+    }
+    p {
+      display: none;
+    }
+  }
 }
 
-@media only screen and (min-width: 1200px)  {
-  .restaurant_section, .facials_section{
-    p{
-      margin: 0 25%;
-    }}
-}
-.saunas_section{
-  width: 60vw;
-  margin: auto;
-}
+@media only screen and (min-width: 768px) {
+  header {
+    .web_name {
+      visibility: visible;
+    }
+  }
+  .facials_section {
+    margin: 0rem 2rem;
+
+    p {
+      margin: 0 10%;
+    }
+  }
+  .restaurant_section {
+    margin: 0 2rem 2rem;
+
+    p {
+      margin: 0 10%;
+    }
+  }
+  .info_section,
+  .massage_section {
+    width: 60vw;
+    margin: auto;
+  }
+
+  main .banner_img {
+    .banner_text {
+      text-align: right;
+      width: 500px;
+      padding: 3rem;
+
+      h1 {
+        font-size: 5rem;
+      }
+      p {
+        width: 100%;
+        font-size: 1.5rem;
+      }
+    }
+  }
+  @media only screen and (min-width: 992px) {
+    .restaurant_section {
+      p {
+        margin: 0 15%;
+      }
+    }
+  }
+
+  @media only screen and (min-width: 1200px) {
+    .restaurant_section,
+    .facials_section {
+      p {
+        margin: 0 25%;
+      }
+    }
+  }
+  .saunas_section {
+    width: 60vw;
+    margin: auto;
+  }
 }
