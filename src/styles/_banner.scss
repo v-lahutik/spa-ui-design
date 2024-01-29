@@ -1,0 +1,44 @@
+main .banner_img {
+    width: 100vw;
+    height: 400px;
+  
+    background-image: url("/src/images/icons8-team-y2T5hT7pWx4-unsplash.jpg");
+    background-size: contain;
+    background-position: left;
+    background-repeat: no-repeat;
+    opacity: 85%;
+  
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  
+    .banner_text {
+      text-align: right;
+      width: 400px;
+  
+      padding: 2rem;
+      margin-top: 1rem;
+  
+      h1 {
+        font-size: 3rem;
+        color: white;
+        text-shadow: 2px 2px 4px #000000;
+      }
+  
+      p {
+        font-size: 1rem;
+        color: $text-color;
+  
+        text-align: right;
+        width: 250px;
+        margin-left: auto;
+      }
+  
+      a {
+        text-shadow: none;
+        border-radius: 25px;
+        margin: 5px;
+      }
+    }
+  }
+  

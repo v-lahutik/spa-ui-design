@@ -1,0 +1,23 @@
+.divider {
+    display: flex;
+    align-items: center;
+        h3 {
+      color: $primary;
+      text-align: center;
+      margin: 2rem;
+      font-size: 2rem;
+  }
+
+  }
+  
+  .divider::before,
+  .divider::after {
+    flex: 1;
+    content: "";
+   border-top: 1px solid $primary;
+    // padding: 1px;
+    // background-color: $primary;
+    
+
+  }
+  

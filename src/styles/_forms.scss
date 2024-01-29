@@ -1,0 +1,60 @@
+.forms {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .form_container,
+  .gift_container {
+    max-width: 400px;
+    margin: 30px;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+  }
+  
+  form {
+    display: grid;
+    grid-gap: 5px;
+  }
+  
+  label {
+    font-weight: bold;
+    color: $tertiary;
+  }
+  
+  input,
+  textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid $secondary;
+    border-radius: 4px;
+  
+    &:focus {
+      outline: none;
+      border: 1px solid $primary;
+    }
+  }
+  
+  select {
+    padding: 10px;
+    margin: 12 0px;
+  
+    &:focus {
+      outline: none;
+      border: 1px solid $primary;
+    }
+  }
+  
+  input[type="submit"] {
+    background-color: $primary;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: $tertiary;
+  }

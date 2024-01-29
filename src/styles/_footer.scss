@@ -1,0 +1,17 @@
+footer {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+  
+    background-color: $secondary;
+    text-align: center;
+    padding-top: 1rem;
+  
+    .social_media {
+      padding: 1rem 0;
+      a {
+        font-size: 1.5rem;
+        margin: 1rem;
+      }
+    }
+  }

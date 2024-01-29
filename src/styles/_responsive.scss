@@ -1,0 +1,61 @@
+@media only screen and (max-width: 520px) {
+    .banner_img {
+      position: relative;
+      top: 50px;
+      .banner_text h1,
+      a {
+        position: relative;
+        top: 80px;
+      }
+      p {
+        display: none;
+      }
+    }
+  }
+  
+  @media only screen and (min-width: 768px) {
+    header {
+      .web_name {
+        visibility: visible;
+      }
+    }
+    .info_section,
+    .massage_section {
+      width: 60vw;
+      margin: auto;
+    }
+  
+    main .banner_img {
+      .banner_text {
+        text-align: right;
+        width: 500px;
+        padding: 3rem;
+  
+        h1 {
+          font-size: 5rem;
+        }
+        p {
+          width: 100%;
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+
+  @media only screen and (min-width: 1200px) {
+     .saunas_section{
+      width: 60%;
+      margin: auto;
+    }  
+    .facials_section{
+      p {
+        width: 50%;
+      }
+    }
+    .restaurant_section{
+      p{
+        width: 40%;
+      }
+    }
+   
+}

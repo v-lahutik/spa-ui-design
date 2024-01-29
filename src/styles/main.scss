@@ -1,10 +1,31 @@
-@import "./variables.scss";
+@import "variables";
+
+@import "header";
+
+@import "banner";
+
+@import "divider";
+
+@import "dropdown";
+
+@import "saunas";
+
+@import "facials";
+
+@import "restaurant";
+
+@import "forms";
+
+@import "footer";
+
+@import "responsive";
 
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
 
 @import "../../node_modules/bootstrap/scss/variables";
 
 @import url("https://fonts.googleapis.com/css2?family=Crimson+Text&family=Lato&family=Playfair+Display:wght@400;500&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -17,434 +38,17 @@
 h5 {
   color: $primary;
 }
-
-// header styling
-
-header {
-  display: flex;
-  width: 100vw;
-  height: 50px;
-  position: fixed;
-  z-index: 100;
-
-  .logo {
-    padding-left: 1rem;
-  }
-
-  .web_name {
-    width: 100%;
-    padding-top: 1rem;
-    padding-left: 1rem;
-    visibility: hidden;
-  }
-}
-
-// nav bar styling
-nav {
-  width: 100vw;
-  display: flex;
-  justify-content: flex-end;
-  padding: 0 2rem;
-}
-
-nav a {
-  color: $tertiary;
-  font-weight: 400;
+section p{
   text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-nav a:hover {
-  background-color: #dddddd28;
-  color: black;
-}
-
-// banner styling
-
-main .banner_img {
-  width: 100vw;
-  height: 400px;
-
-  background-image: url(../images/icons8-team-y2T5hT7pWx4-unsplash.jpg);
-  background-size: contain;
-  background-position: left;
-  background-repeat: no-repeat;
-  opacity: 85%;
-
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-
-  .banner_text {
-    text-align: right;
-    width: 400px;
-
-    padding: 2rem;
-    margin-top: 1rem;
-
-    h1 {
-      font-size: 3rem;
-      color: white;
-      text-shadow: 2px 2px 4px #000000;
-    }
-
-    p {
-      font-size: 1rem;
-      color: $text-color;
-
-      text-align: right;
-      width: 250px;
-      margin-left: auto;
-    }
-
-    a {
-      text-shadow: none;
-      border-radius: 25px;
-      margin: 5px;
-    }
-  }
-}
-
-//division styling
-
-h3 {
-  text-align: center;
-  margin: 2rem;
-  font-size: 2rem;
-  color: $primary;
-}
-
-.divider {
-  display: flex;
-  align-items: center;
-}
-
-.divider::before,
-.divider::after {
-  flex: 1;
-  content: "";
-  // padding: 1px;
-  // background-color: $primary;
-  border-top: 1px solid $primary;
-}
-
-// info and massage drop down section
-
-.info_section,
-.massage_section {
-  width: 90vw;
+  width: 80%;
   margin: auto;
-
-  li {
-    list-style: none;
-    line-height: 2.5rem;
-  }
 }
 
-details {
-  border-bottom: black 1px solid;
-  font-size: 1.2rem;
-}
-
-summary {
-  padding: 0.5em 1.3rem;
-  list-style: none;
-  display: flex;
-  justify-content: space-between;
-  transition: height 500ms ease;
-}
-
-summary:after {
-  content: "\002B";
-}
-
-details[open] summary {
-  border-bottom: 1px solid #aaa;
-  margin-bottom: 0.5em;
-}
-
-details[open] summary:after {
-  content: "\00D7";
-}
-
-details[open] div {
-  padding: 0.5em 1em;
-}
-
-// saunas section
-.saunas_section {
-  margin: 2rem 2rem;
-  p {
-    text-align: center;
-  }
-
-  section p {
-    width: 90%;
-    text-align: center;
-    padding-bottom: 1rem;
-  }
-}
-
-//  facials section
-
-.facial_options {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  h5 {
-    text-align: center;
-  }
-}
-.facials_section {
-  p {
-    text-align: center;
-    padding-bottom: 1rem;
-  }
-}
-
-// facial flip cards
-
-.flip-card {
-  background-color: transparent;
-  width: 300px;
-  height: 300px;
-  perspective: 1000px;
-  margin: 1.5rem;
-}
-
-.flip-card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 1500ms ease-in-out;
-  transform-style: preserve-3d;
-}
-
-.flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
-}
-
-.flip-card-front,
-.flip-card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
-
-.flip-card-front {
-  background-color: #bbb;
-  color: black;
-}
-
-.flip-card-back {
-  background-color: $primary;
-  color: white;
-  transform: rotateY(180deg);
-  padding: 0.5rem;
-}
-
-// restaurant section
-
-.restaurant_section {
-  .menu {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 1rem;
-
-    .card-text {
-      margin: 0;
-    }
-  }
-  img {
-    width: 100%;
-    height: 90%;
-  }
-  h5 {
-    text-align: center;
-    font-style: normal;
-    padding: 0.3rem;
-  }
-  p {
-    text-align: center;
-    padding: 1rem 0;
-  }
-
-  a {
-    width: 100%;
-    margin-left: auto;
-  }
-}
-
-// booking & shop section
-.forms {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.form_container,
-.gift_container {
-  max-width: 400px;
-  margin: 30px;
-  background-color: #fff;
-  padding: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
-}
-
-form {
-  display: grid;
-  grid-gap: 5px;
-}
-
-label {
-  font-weight: bold;
-  color: $tertiary;
-}
-
-input,
-textarea {
-  width: 100%;
-  padding: 8px;
-  margin-top: 5px;
-  margin-bottom: 15px;
-  border: 1px solid $secondary;
-  border-radius: 4px;
-
-  &:focus {
-    outline: none;
-    border: 1px solid $primary;
-  }
-}
-
-select {
-  padding: 10px;
-  margin: 12 0px;
-
-  &:focus {
-    outline: none;
-    border: 1px solid $primary;
-  }
-}
-
-input[type="submit"] {
-  background-color: $primary;
-  color: #fff;
-  cursor: pointer;
-}
-
-input[type="submit"]:hover {
-  background-color: $tertiary;
-}
-
-// go up 
+// go up button
 
 .go_up{
   display: flex;
   justify-content: center;
   margin: 1rem;
   padding-top: 1rem;
-}
-// footer styling
-footer {
-  width: 100%;
-  height: auto;
-  overflow: hidden;
-
-  background-color: $secondary;
-  text-align: center;
-  padding-top: 1rem;
-
-  .social_media {
-    padding: 1rem 0;
-    a {
-      font-size: 1.5rem;
-      margin: 1rem;
-    }
-  }
-}
-// media queries
-
-@media only screen and (max-width: 520px) {
-  .banner_img {
-    position: relative;
-    top: 50px;
-    .banner_text h1,
-    a {
-      position: relative;
-      top: 80px;
-    }
-    p {
-      display: none;
-    }
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  header {
-    .web_name {
-      visibility: visible;
-    }
-  }
-  .facials_section {
-    margin: 0rem 2rem;
-
-    p {
-      margin: 0 10%;
-    }
-  }
-  .restaurant_section {
-    margin: 0 2rem 2rem;
-
-    p {
-      margin: 0 10%;
-    }
-  }
-  .info_section,
-  .massage_section {
-    width: 60vw;
-    margin: auto;
-  }
-
-  main .banner_img {
-    .banner_text {
-      text-align: right;
-      width: 500px;
-      padding: 3rem;
-
-      h1 {
-        font-size: 5rem;
-      }
-      p {
-        width: 100%;
-        font-size: 1.5rem;
-      }
-    }
-  }
-  @media only screen and (min-width: 992px) {
-    .restaurant_section {
-      p {
-        margin: 0 15%;
-      }
-    }
-  }
-
-  @media only screen and (min-width: 1200px) {
-    .restaurant_section,
-    .facials_section {
-      p {
-        margin: 0 25%;
-      }
-    }
-  }
-  .saunas_section {
-    width: 60vw;
-    margin: auto;
-  }
 }

@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "start": "npm run compile-scss & live-server",
-    "compile-scss": "sass --watch styles/main.scss styles/main.css",
+    "compile-scss": "sass --watch src/styles/main.scss build/main.css",
     "build": "rm -rf build && parcel build ./index.html --dist-dir build --public-url ./",
     "publish": "gh-pages -d build"
   },

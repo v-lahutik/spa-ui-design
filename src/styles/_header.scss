@@ -1,0 +1,48 @@
+html{
+  width: 100%;
+}
+body{
+  
+  width: 100vw;
+}
+header {
+    display: flex;
+    height: 50px;
+    width: auto;
+    position: fixed;
+    z-index: 100;
+    
+  
+    .logo {
+      padding-left: 1rem;
+    }
+  
+    .web_name {
+      width: 100%;
+      padding-top: 1rem;
+      padding-left: 1rem;
+      visibility: hidden;
+    }
+  }
+  
+  // nav bar styling
+  nav {
+    width: 100vw;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 2rem;
+  }
+  
+  nav a {
+    color: $tertiary;
+    font-weight: 400;
+    text-align: center;
+    // padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  nav a:hover {
+    background-color: #dddddd28;
+    color: black;
+  }
+  

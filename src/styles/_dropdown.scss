@@ -1,0 +1,42 @@
+// info and massages drop down section
+
+.info_section,
+.massage_section {
+  width: 90vw;
+  margin: auto;
+
+  li {
+    list-style: none;
+    line-height: 2.5rem;
+  }
+
+  details {
+    border-bottom: black 1px solid;
+    font-size: 1.2rem;
+  }
+
+  summary {
+    padding: 0.5em 1.3rem;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    transition: height 500ms ease;
+  }
+
+  summary:after {
+    content: "\002B";
+  }
+
+  details[open] summary {
+    border-bottom: 1px solid #aaa;
+    margin-bottom: 0.5em;
+  }
+
+  details[open] summary:after {
+    content: "\00D7";
+  }
+
+  details[open] div {
+    padding: 0.5em 1em;
+  }
+}
